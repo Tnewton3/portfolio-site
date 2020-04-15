@@ -92,29 +92,24 @@
             
             <h3>Gallery</h3>
             <div class="photo-gallery">
-                <a href="javascript:void(0)" data-mfp-src="./assets/peace.jpg">
-                    <img src="./assets/peace.jpg" alt="Peace">
-                </a>
-                <a href="javascript:void(0)" data-mfp-src="./assets/poster-2.png">
-                    <img src="./assets/poster-2.png" alt="Movie Poster">
-                </a>
-                <a href="javascript:void(0)" data-mfp-src="./assets/orange-soda-2.png">
-                    <img src="./assets/orange-soda-2.png" alt="Orange Soda 2">
-                </a>
-                <a href="javascript:void(0)" data-mfp-src="./assets/cd-project.jpg">
-                    <img src="./assets/cd-project.jpg" alt="CD Project">
-                </a>
-                <a href="javascript:void(0)" data-mfp-src="./assets/smoking-woman.jpg">
-                    <img src="./assets/smoking-woman.jpg" alt="Smoking Woman">
-                </a>
-                <a href="javascript:void(0)" data-mfp-src="./assets/sheep-and-circle.jpg">
-                    <img src="./assets/sheep-and-circle.jpg" alt="Sheep and Circle">
-                </a>
             </div>
         </div>
     </div>
 
     <script>
+        $.getJSON( "./gallery.json", function( data ) {
+            var items = data.galleryImages;
+            console.log(items)
+            
+            $.each(items, function(index, item) {
+                item = './assets/' + item;
+                $('.photo-gallery').append(`
+                    <a href="javascript:void(0)" data-mfp-src="${item}">
+                        <img src="${item}" alt="">
+                    </a>
+                `);
+            })
+        });
         $(document).ready(function() {
             $('.image-link').magnificPopup({type:'image'});
 
