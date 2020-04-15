@@ -33,15 +33,24 @@
                     </div>
                 </div>
                 <div class="project-card">
+                    <a href="javascript:void(0)" class="image-link" data-mfp-src="./assets/character_dev.jpg">
+                        <img src="./assets/character_dev.jpg" alt="Character Design">
+                    </a>
 
                     <div class="project-card-content">
                         <h4>Character Design</h3>
                         <p>This was a visual design assignment in which we had to create our own game character and give them a backstory. We were then told to create a visual representation highlighting their strengths and weaknesses.</p>
                     </div>
-                    
-                    <a href="javascript:void(0)" class="image-link" data-mfp-src="./assets/character_dev.jpg">
-                        <img src="./assets/character_dev.jpg" alt="Character Design">
+                </div>
+                <div class="project-card">
+                    <a href="javascript:void(0)" class="image-link" data-mfp-src="./assets/shoe-project.jpg">
+                        <img src="./assets/shoe-project.jpg" alt="Shoe Project">
                     </a>
+
+                    <div class="project-card-content">
+                        <h4>Shoe Project</h3>
+                        <p>Shoe Project This project was also for visual design and we were given a blank shoe as well as a blank East Bay magazine. The idea was to create your own custom shoe and then give it a roll out using the East Bay magazine.</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <a href="javascript:void(0)" class="image-link" data-mfp-src="./assets/triples_label.png">
@@ -52,6 +61,55 @@
                         <p>Triple S Label This is a label I created for a newly starting spice company called “Triple S”. I was sent a list of things that they wanted on the label and an idea of what things they may like.  They asked me to help them put it together and create something they could put on their bottles.</p>
                     </div>
                 </div>
+                <div class="project-card">
+                    <a href="javascript:void(0)" class="image-link" style="max-width: 250px;" data-mfp-src="./assets/red-poster.jpg">
+                        <img src="./assets/red-poster.jpg" alt="Character Poster">
+                    </a>
+                    <div class="project-card-content">
+                        <h4>Character Poster</h3>
+                        <p>This was a visual design assignment in which we had to create our own game character and give them a backstory. We were then told to create a visual representation highlighting their strengths and weaknesses.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="javascript:void(0)" class="image-link" data-mfp-src="./assets/orange-soda.png">
+                        <img src="./assets/orange-soda.png" alt="Orange Soda">
+                    </a>
+                    <div class="project-card-content">
+                        <h4>Orange Soda</h3>
+                        <p>This file is a concept cover art for the song "Orange Soda" by Baby Keem.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="javascript:void(0)" class="image-link" style="max-width: 250px;" data-mfp-src="./assets/movie-poster.PNG">
+                        <img src="./assets/movie-poster.PNG" alt="Movie Poster">
+                    </a>
+                    <div class="project-card-content">
+                        <h4>Movie Poster</h3>
+                        <p>This movie poster was created for a visual design assignment for my class a couple semesters ago. The goal of the assignment was to use a picture of yourself and incorporate it with a movie poster.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Gallery</h3>
+            <div class="photo-gallery">
+                <a href="javascript:void(0)" data-mfp-src="./assets/peace.jpg">
+                    <img src="./assets/peace.jpg" alt="Peace">
+                </a>
+                <a href="javascript:void(0)" data-mfp-src="./assets/poster-2.png">
+                    <img src="./assets/poster-2.png" alt="Movie Poster">
+                </a>
+                <a href="javascript:void(0)" data-mfp-src="./assets/orange-soda-2.png">
+                    <img src="./assets/orange-soda-2.png" alt="Orange Soda 2">
+                </a>
+                <a href="javascript:void(0)" data-mfp-src="./assets/cd-project.jpg">
+                    <img src="./assets/cd-project.jpg" alt="CD Project">
+                </a>
+                <a href="javascript:void(0)" data-mfp-src="./assets/smoking-woman.jpg">
+                    <img src="./assets/smoking-woman.jpg" alt="Smoking Woman">
+                </a>
+                <a href="javascript:void(0)" data-mfp-src="./assets/sheep-and-circle.jpg">
+                    <img src="./assets/sheep-and-circle.jpg" alt="Sheep and Circle">
+                </a>
             </div>
         </div>
     </div>
@@ -59,6 +117,16 @@
     <script>
         $(document).ready(function() {
             $('.image-link').magnificPopup({type:'image'});
+
+            $('.photo-gallery').each(function() { // the containers for all your galleries
+                $(this).magnificPopup({
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    gallery: {
+                        enabled:true
+                    }
+                });
+            });
         });
     </script>
 </body>

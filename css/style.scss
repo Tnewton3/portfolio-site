@@ -159,15 +159,11 @@ h3 {
             height: auto;
             margin-right: 20px;
             margin-left: 0;
+            max-width:calc(100% - 20px);
         }
 
         .project-card-content {
             width: 100%;
-            
-            &~a > img {
-                margin-left: 20px;
-                margin-right: 0;
-            }
         }
 
         .project-card-hover {
@@ -218,6 +214,30 @@ h3 {
                 opacity: 1;
                 background-position: 0 0;
             }
+        }
+
+        &:nth-of-type(2n + 1) {
+            flex-direction: row-reverse;
+
+            img {
+                margin-left: 20px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+        margin: 10px 10px;
+        max-width: 300px;
+
+        img {
+            width: 100%;
         }
     }
 }

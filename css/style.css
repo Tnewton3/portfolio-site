@@ -169,15 +169,11 @@ h3:after {
   height: auto;
   margin-right: 20px;
   margin-left: 0;
+  max-width: calc(100% - 20px);
 }
 
 .project-cards .project-card .project-card-content {
   width: 100%;
-}
-
-.project-cards .project-card .project-card-content ~ a > img {
-  margin-left: 20px;
-  margin-right: 0;
 }
 
 .project-cards .project-card .project-card-hover {
@@ -238,5 +234,37 @@ h3:after {
           transform: translateY(100%);
   opacity: 1;
   background-position: 0 0;
+}
+
+.project-cards .project-card:nth-of-type(2n + 1) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.project-cards .project-card:nth-of-type(2n + 1) img {
+  margin-left: 20px;
+  margin-right: 0;
+}
+
+.photo-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.photo-gallery a {
+  margin: 10px 10px;
+  max-width: 300px;
+}
+
+.photo-gallery a img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
