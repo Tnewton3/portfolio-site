@@ -16,6 +16,12 @@ h1 {
   line-height: 1em;
 }
 
+@media (max-width: 991px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
 h1 span {
   color: #00c3fd;
 }
@@ -28,6 +34,12 @@ h2 {
   color: #00c3fd;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  h2 {
+    font-size: 24px;
+  }
 }
 
 h3 {
@@ -236,16 +248,36 @@ h3:after {
   background-position: 0 0;
 }
 
-.project-cards .project-card:nth-of-type(2n + 1) {
+.project-cards .project-card:nth-of-type(2n) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-.project-cards .project-card:nth-of-type(2n + 1) img {
+.project-cards .project-card:nth-of-type(2n) img {
   margin-left: 20px;
   margin-right: 0;
+}
+
+@media (max-width: 991px) {
+  .project-cards .project-card {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project-cards .project-card img {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .project-cards .project-card .project-card-content h4, .project-cards .project-card .project-card-content p {
+    text-align: center;
+  }
 }
 
 .photo-gallery {
